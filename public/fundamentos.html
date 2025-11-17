@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fundamentos Web</title>
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO básico -->
+    <meta name="description" content="Página de fundamentos web del proyecto de lista de tareas." />
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Fundamentos de la Web</h1>
+    </header>
+
+    <section class="contenedor">
+      <h2>Estructura básica</h2>
+      <p>
+        Esta página demuestra el uso de HTML semántico, CSS con Flexbox y JavaScript básico.
+      </p>
+    </section>
+
+    <section class="contenedor">
+      <h2>Ejemplo con switch</h2>
+      <p>Abre la consola del navegador para ver los mensajes.</p>
+      <button onclick="evaluarPrioridad(1)">Prioridad 1</button>
+      <button onclick="evaluarPrioridad(2)">Prioridad 2</button>
+      <button onclick="evaluarPrioridad(3)">Prioridad 3</button>
+    </section>
+
+    <section class="contenedor">
+      <h2>Ejemplo con for + continue</h2>
+      <button onclick="sumarSaltandoSeis()">Sumar 1 a 10 (saltando el 6)</button>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 - Proyecto Lista de Tareas</p>
+    </footer>
+
+    <script>
+      // switch(prioridad)
+      function evaluarPrioridad(prioridad) {
+        switch (prioridad) {
+          case 1:
+            console.log("Prioridad baja");
+            break;
+          case 2:
+            console.log("Prioridad media");
+            break;
+          case 3:
+            console.log("Prioridad alta");
+            break;
+          default:
+            console.log("Prioridad desconocida");
+        }
+      }
+
+      // for + continue (ej: sumar números saltando el 6)
+      function sumarSaltandoSeis() {
+        let suma = 0;
+        for (let i = 1; i <= 10; i++) {
+          if (i === 6) continue; // saltar el 6
+          suma += i;
+        }
+        console.log("Suma total (sin el 6):", suma);
+      }
+    </script>
+  </body>
+</html>
